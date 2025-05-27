@@ -1,6 +1,7 @@
 public class Profissional {
-
-    String nome;
-    String telefone;
+    
+    public int id;
+    public String nome;
+    public String telefone;
 
 }

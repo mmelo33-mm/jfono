@@ -1,6 +1,7 @@
 public class Paciente {
     
-    String nome;
-    String email;
+    public int id;
+    public String nome;
+    public String email;
 
 }
