@@ -3,31 +3,35 @@ public class App {
         System.out.println("Hello, Fono");
         
         //criação de um objeto
-        Exercicio ex1 = new Exercicio(); 
-        ex1.nome = "Exercício de articulação com consoantes";
-        ex1.descricao = "O paciente repete sequências de palavras com consoantes fortes (como 'p', 't', 'k') para melhorar a articulação e a clareza na pronúncia";
-        ex1.tempoMin = 4;
-        ex1.som = "sons/articulacao_consoantes.mp3";
+        Exercicio ex1 = new Exercicio("Exercício de articulação com consoantes", "O paciente repete sequências de palavras com consoantes fortes (como 'p', 't', 'k') para melhorar a articulação e a clareza na pronúncia", 
+                                        "sons/articulacao_consoantes.mp3", 4, "sem exemplo"); 
 
 
-        Exercicio ex2 = new Exercicio(); 
-        ex2.nome = "Exercício de vibração labial";
-        ex2.descricao = "Exercício de aquecimento onde o paciente faz vibração labial com diferentes intensidades e velocidades";
-        ex2.tempoMin = 4;
-        ex2.som = "sons/vibracao_labial.mp3";
-        ex2.exemplo = "brbrbr";
-
-        Exercicio ex3 = new Exercicio(); 
-        ex3.nome = "Exercício de produção de vogais";
-        ex3.descricao = "O paciente repete as vogais (a, e, i, o, u) de forma clara e pausada, focando na articulação e na ressonância de cada uma";
-        ex3.tempoMin = 6;
-        ex3.som = "sons/vogais.mp3";
-        ex3.exemplo = "'A' -pausa- 'E'...";
+        Exercicio ex2 = new Exercicio("Exercicio de vibração labial", "Exercício de aquecimento onde o paciente faz vibração labial com diferentes intensidades e velocidades",
+                                        "brbrbr"); 
 
 
+        Exercicio ex3 = new Exercicio("Exercício de produção de vogais", "O paciente repete as vogais (a, e, i, o, u) de forma clara e pausada, focando na articulação e na ressonância de cada uma", 
+        "'A' -pausa- 'E'..."); 
+    
+        System.out.println("nome: "+ex1.getNome());
+        System.out.println("descrição: "+ex1.getDescricao());
+        System.out.println("som: "+ex1.getSom());
+        System.out.println("exemplo: "+ex1.getExemplo());
 
+
+        System.out.println("nome: "+ex2.getNome());
+        System.out.println("descrição: "+ex2.getDescricao());
         
         
+
+
+
+
+
+
+
+
         Paciente p1 = new Paciente();
         p1.nome = "Marcelo";
         p1.email = "marcelo@gmail.com";
@@ -44,17 +48,31 @@ public class App {
 
 
 
-        Clinica c1 = new Clinica();
-        c1.nome = "Clinica Fono Ceilandia";
-        c1.cnpj = "37.369.557/0001-04";
-        c1.cep = "72220-140";
-        c1.endereco = "Quadra QNN 14";
 
 
-        Clinica c2 = new Clinica();
-        c2.nome = "Clinica Taguatinga";
-        c2.cnpj = "05.993.191/0001-53";
-        c2.cep = "72158-220";
-        c2.endereco = "Setor Centro Metropolitano Quadra 2 Conjunto B";
+
+
+
+
+        Clinica c1 = new Clinica("Clinica Fono Ceilandia", "37.369.557/0001-04", "Quadra QNN 14", "72220-140");
+        Clinica c2 = new Clinica("Clinica Taguatinga", "Setor Centro Metropolitano Quadra 2 Conjunto B", "72158-220");
+
+        System.out.println("Escolha umas das clinicas para realizar as consultas:");
+        System.out.println("Clinica 1");
+
+        System.out.println("Nome da Clinica: "+c1.getNome());
+        System.out.println("CNPJ: "+c1.getCnpj());
+        System.out.println("Endereço: "+c1.getEndereco());
+        System.out.println("CEP: "+c1.getCep());
+
+        System.out.println("Opção 2");
+        System.out.println("Nome: "+c2.getNome());
+        System.out.println("Endereço: "+c2.getEndereco());
+        System.out.println("CEP: "+c2.getCep());
+        
     }
+
+    
+
+
 }
