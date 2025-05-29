@@ -23,6 +23,12 @@ public class Clinica {
     }
 
 
+    public Clinica(String nome, String endereco){
+        this.nome = nome;
+        this.endereco = endereco;
+    }
+
+
     
     
     
